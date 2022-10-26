@@ -1,0 +1,42 @@
+@import url(../../App.css);
+
+.notificationPageContainer {
+  max-width: 100%;
+
+  display: grid;
+  place-items: center;
+}
+
+.headerSection {
+  width: 100%;
+  padding: 1em;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.headerSection > p {
+  color: var(--color5);
+}
+
+.unreadTexts {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+}
+
+.unreadTexts > div {
+  margin-left: 1em;
+  padding: 0.25em 0.75em;
+  background-color: var(--blue);
+  font-weight: var(--bold);
+  color: var(--white);
+  text-align: center;
+  border-radius: 5px;
+}
+
+.chatsSection {
+  width: 80%;
+  align-self: center;
+}

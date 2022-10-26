@@ -1,53 +1,45 @@
-.App {
-  text-align: center;
-}
+:root {
+  /* Sizes */
+  --Mobile: 375px;
+  --Desktop: 1440px;
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
+  /* Primary Colors*/
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
+  --red: hsl(1, 90%, 64%);
+  --white: hsl(0, 0%, 100%);
+  --blue: hsl(219, 85%, 26%);
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
+  /* Neutral Colors */
 
-.App-link {
-  color: #61dafb;
-}
+  --color1: hsl(210, 60%, 98%);
+  --color2: hsl(211, 68%, 94%);
+  --color3: hsl(205, 33%, 90%);
+  --color4: hsl(219, 14%, 63%);
+  --color5: hsl(219, 12%, 42%);
+  --color6: hsl(224, 21%, 14%);
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-}
+  /* Typography */
+  /* --p: 16px; */
+  --p: clamp(0.75rem, 0.4643rem + 1.4286vw, 2.25rem);
 
+  /* Font */
+  --reg: 500;
+  --bold: 800;
+}
 
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
+  padding: 0;
+  overflow-x: hidden;
+  font-family: "Plus Jakarta Sans", sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  font-size: var(--p);
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
 }
+

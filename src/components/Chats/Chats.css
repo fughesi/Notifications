@@ -1,0 +1,17 @@
+@import url("../../App.css");
+
+.chatsMain {
+    display: flex;
+
+    border-radius: 3px;
+}
+
+.unreadChat {
+    
+    background-color: var(--color1);
+}
+
+.profilePic {
+    width: 30px;
+    border-radius: 50%;
+}

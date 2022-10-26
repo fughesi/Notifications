@@ -1,15 +1,22 @@
-import React from "react";
+import React from "react"
+import "./NotificationPage.css";
+import { Chats } from "../../components/Chats/Chats";
 
-export default function NotificationPage() {
-  return <>
-  <h1>NotificationPage</h1>
-  <h1>NotificationPage</h1>
-  <h1>NotificationPage</h1>
-  <h1>NotificationPage</h1>
-  <h1>NotificationPage</h1>
-  <h1>NotificationPage</h1>
-  <h1>NotificationPage</h1>
-  <h1>NotificationPage</h1>
-  <h1>NotificationPage</h1>
-  </>;
+export function Notifications() {
+  return (
+    <main className="notificationPageContainer">
+      
+      <section className="headerSection">
+        <div className="unreadTexts">
+          <h3>Notifications</h3>
+          <div>3</div>
+        </div>
+        <p>Mark all as read</p>
+      </section>
+
+      <section className="chatsSection">
+        <Chats />
+      </section>
+    </main>
+  );
 }
