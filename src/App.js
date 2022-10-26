@@ -1,24 +1,16 @@
-import logo from './logo.svg';
-import './App.css';
+import { Suspense } from "react";
+
+import Notifications from "./pages/_pagesEXPORT.js";
+// import { Notifications } from "./pages/_pagesEXPORT";
+// import { NotificationPage } from "./pages/NotificationPage/NotificationPage";
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <main className="App">
+      <Suspense fallback={<h1>Loading</h1>}>
+        <Notifications />
+      </Suspense>
+    </main>
   );
 }
 
