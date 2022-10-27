@@ -21,6 +21,7 @@
   /* Typography */
   /* --p: 16px; */
   --p: clamp(0.75rem, 0.4643rem + 1.4286vw, 2.25rem);
+  --smallText: clamp(0.5rem, 0.2143rem + 1.4286vw, 2rem);
 
   /* Font */
   --reg: 500;
