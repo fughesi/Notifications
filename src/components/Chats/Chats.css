@@ -1,17 +1,50 @@
 @import url("../../App.css");
 
-.chatsMain {
-    display: flex;
+/* .chatsMain { */
+.chatHeadContainer {
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
 
-    border-radius: 3px;
+  margin-bottom: 1.1rem;
+  padding: 0.6rem 2rem 1rem 0.6rem;
+  border-radius: 3px;
+}
+
+.chatHeadContainer > div:nth-child(1) {
+    display: flex;
+    flex-direction: column;
+    aspect-ratio: 1/1;
+    /* outline: 1px solid red; */
+}
+
+.chatHeadContainer > div:nth-child(2) p {
+  margin: 0.25em 0 0 0;
+
+  color: var(--color4);
+}
+
+.newMessage {
+  display: inline-block;
+  margin-left: 0.25em;
+  width: 0.5rem;
+  background-color: var(--red);
+  border-radius: 50%;
+  aspect-ratio: 1/1;
 }
 
 .unreadChat {
-    
-    background-color: var(--color1);
+  background-color: var(--color1);
+}
+
+.boldText {
+  font-weight: var(--bold);
 }
 
 .profilePic {
-    width: 30px;
-    border-radius: 50%;
+  width: 2rem;
+  margin: 0 1rem 0 0;
+  border-radius: 50%;
+  aspect-ratio: 1/1;
+  object-fit: cover;
 }

@@ -20,6 +20,12 @@
   color: var(--color5);
 }
 
+.headerSection > p:hover {
+  font-weight: var(--bold);
+  color: var(--blue);
+  cursor: pointer;
+}
+
 .unreadTexts {
   display: flex;
   align-items: baseline;
