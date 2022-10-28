@@ -1,7 +1,7 @@
 import React, { useState } from "react";
-import "./NotificationPage.css";
 import { Chats } from "../../components/Chats/Chats";
 import { imagesJSON } from "../../resources/images/_imagesJSON";
+import "./NotificationPage.css";
 
 export function Notifications() {
   const [isRead, setIsRead] = useState(
@@ -10,35 +10,35 @@ export function Notifications() {
     })
   );
 
-  function readTheMsg(e) {
-    // const value = e.target.value;
-
-    console.log(e);
+  const readTheMsg = (e) => {
+    const value = e.target.value;
+    console.log(e.target);
     console.log("clicked");
     // setIsRead({
-    //   ...isRead,
-    //   [key]: !value,
-    // });
-  }
+      // ...isRead,
+      // isRead: this.isRead.value,
+    // }, this);
+  };
+  console.log(isRead);
 
-  function markAllAsRead() {
+  const markAllAsRead = () => {
     setIsRead(
-      imagesJSON.map((i, index) => {
+      imagesJSON.map((i) => {
         return { index: i.key, isRead: true };
       })
     );
-  }
+  };
 
-  function checkIfRead(x) {
-    return x.isRead === false;
-  }
+  const checkIfRead = (x) => x.some((i) => i.isRead === false);
+
+  const unreadLength = (x) => x.filter((i) => i.isRead === false).length;
 
   return (
     <main className="notificationPageContainer">
       <section className="headerSection">
         <div className="unreadTexts">
           <h3>Notifications</h3>
-          {isRead.some(checkIfRead) && <div>{isRead.length}</div>}
+          {checkIfRead(isRead) && <div>{unreadLength(isRead)}</div>}
         </div>
         <p onClick={markAllAsRead}>Mark all as read</p>
       </section>

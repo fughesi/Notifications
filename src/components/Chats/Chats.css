@@ -19,7 +19,6 @@
 .chatHeadContainer > div:nth-child(2) p {
   margin: 0.25em 0 0 0;
 
-  /* outline: 1px solid red; */
   color: var(--color4);
 }
 
@@ -61,12 +60,35 @@
   filter: brightness(1.5);
 }
 
+.photoComment {
+  /* display: flex; */
+}
+
+.postedPhoto {
+  width: 2.1rem;
+  border-radius: 5px;
+  border: 5px double var(--color3);
+  aspect-ratio: 1/1;
+  object-fit: cover;
+}
+
+.postedPhoto:hover {
+cursor: pointer;
+}
+
 .msgText {
   padding: 1em;
-  margin-top: .75em;
-  border: 1px solid var(--color4);
+  margin-top: 0.75em;
+  outline: 1px solid var(--color4);
   border-radius: 3px;
 
   font-size: var(--smallText);
   color: var(--color5);
+}
+
+.msgText:hover {
+  background-color: var(--color3);
+  outline: none;
+
+  cursor: pointer;
 }

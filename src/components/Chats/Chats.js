@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import { imagesJSON } from "../../resources/images/_imagesJSON";
+import postedPhoto from "../../resources/images/postedPhoto.png";
 import "./Chats.css";
 
 export function Chats({ handleClick }) {
@@ -16,18 +17,6 @@ export function Chats({ handleClick }) {
         <img src={x.img} alt="x.alt" className="profilePic" />
       </div>
       <div>
-        
-        
-        
-        
-        <p hidden>
-          {x.key}
-          {x.isRead}
-          </p>
-        
-
-
-
         {x.joined && (
           <p>
             <span className="boldText">{x.name}</span> has joined your group{" "}
@@ -55,9 +44,18 @@ export function Chats({ handleClick }) {
           </p>
         )}
         {x.comment && (
-          <p>
+          <p >
             <span className="boldText">{x.name}</span> commented on your picture{" "}
-            {isNewMessage && <span className="newMessage"></span>}
+            {isNewMessage && (
+            <div >
+                <span className="newMessage"></span>
+                <img
+                  src={postedPhoto}
+                  alt="awesome landscape photo"
+                  className="postedPhoto"
+                />
+              </div>
+            )}
           </p>
         )}
         {x.msg && (
@@ -73,6 +71,13 @@ export function Chats({ handleClick }) {
       </div>
     </div>
   ));
+
+
+  
+  
+  
+  
+
 
   return <main className="chatsMain">{profilePics}</main>;
 }
